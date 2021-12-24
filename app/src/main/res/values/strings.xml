@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kotlin1_Homework4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plus">+</string>
+    <string name="start">Start!</string>
+    <string name="minus">-</string>
+    <string name="not_started_yet">Not started yet!</string>
+    <string name="operation">Operation</string>
+</resources>
