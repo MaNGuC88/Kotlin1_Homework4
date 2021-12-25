@@ -26,8 +26,8 @@ class FragmentTwo : Fragment() {
 
         val viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
-        viewModel.livedata.observe(requireActivity()) { counter ->
-            binding.tvResult.text = counter.toString()
+        viewModel.counterResult.observe(requireActivity()) {
+            binding.tvResult.text = it.toString()
         }
     }
 }

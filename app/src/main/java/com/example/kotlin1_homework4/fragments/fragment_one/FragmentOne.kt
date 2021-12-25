@@ -28,11 +28,12 @@ class FragmentOne : Fragment() {
 
         binding.btnPlus.setOnClickListener {
             viewModel.onIncrementClick()
+            viewModel.clicked("+")
         }
 
         binding.btnMinus.setOnClickListener {
             viewModel.onDecrementClick()
+            viewModel.clicked("-")
         }
     }
-
 }

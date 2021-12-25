@@ -34,13 +34,12 @@ class FragmentThree : Fragment() {
         binding.recycler.adapter = adapter
         binding.recycler.layoutManager = LinearLayoutManager(requireContext())
         binding.recycler.setHasFixedSize(true)
-        binding.recycler.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.HORIZONTAL))
+        binding.recycler.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
 
         val viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        viewModel.livedata.observe(requireActivity()) {
-            list.add("Result: $it")
+        viewModel.getClicked().observe(requireActivity()) {
+            list.add(it.toString())
             adapter.notifyDataSetChanged()
         }
     }
-
 }
